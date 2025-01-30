@@ -1,5 +1,226 @@
 body{
-    font-family: 'Roboto', sans-serif;
-    background-color: rgba(127, 255, 212, 0.11);
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f0f7fa;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+#left-area {
+    order: 2;
+} 
+
+#right-area {
+    order: 1;
+}
+
+#right-area img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+.w40{
+    width: 40%;
+}
+
+.w60{
+    width: 60%;
+}
+
+.header{
+    width: 100%;
+    height: 10%;
+    color: #ffffff;
+    background-color: #393939;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.logo{
+    order: 2;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo img{
+    margin-right: 10px;
+    padding: 5px 0px;
+    object-fit: cover;
+}
+
+.al{
+    order: 1;
+}
+
+.al h1{
+    margin: 0;
+    padding-left: 20px;
+    font-size: 22px;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+}
+
+form{
+    width: 55%;
+}  
+
+.inner-form {
+    padding: 20px; 
+}
+
+.row {
+    margin-bottom: 15px;
+}  
+
+label {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 5px;
+    font-weight: bold;
+} 
+
+input[type="email"],
+input[type="password"] {
     text-align: right;
+    width: 100%; 
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 7px; 
+    box-sizing: border-box; 
+    font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-width: 1px;
+    border-color: #2196F3; 
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5); 
+    outline: none; 
+}
+
+.btn {
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #00c276; 
+    color: #fff; 
+    padding: 16px 15px; 
+    border: none; 
+    border-radius: 7px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+}  
+
+.btn:hover {
+    background-color: #12987d; 
+}
+
+.alertMsg {
+    font-size: inherit;
+    padding: 20px 10px;
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    border-radius: 10px;
+    z-index: 999;
+    height: auto;
+    display: none;
+    color: red;
+    background-color: rgba(255, 228, 228, 0.75);
+    box-shadow: 0px 0 10px 0px rgba(205, 30, 11, 0.5);
+    animation: showFromLeft 0.3s linear;
+} 
+
+.successMsg {
+    font-size: inherit;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 5%;
+    left: 2%;
+    border-radius: 10px;
+    z-index: 999;
+    height: auto;
+    display: none;
+    color: green;
+    background-color: rgba(218, 249, 223, 0.75);
+    box-shadow: 0px 0 10px 0px rgba(11, 205, 61, 0.5);
+    animation: showFromLeft 0.3s normal;
+}
+
+@keyframes showFromLeft {
+    0% { opacity: 0; margin-left: -100%; }
+    25% { opacity: 0.2; margin-left: -50%; }
+    35% { opacity: 0.4; margin-left: -20%; }
+    50% { opacity: 0.8; margin-left: -15%; }
+    65% { opacity: 0.9; margin-left: -12%; }
+    75% { opacity: 0.9; margin-left: -10%; }
+    80% { opacity: 0.9; margin-left: -8%; }
+    85% { opacity: 0.95; margin-left: -6%; }
+    90% { opacity: 0.95; margin-left: -4%; }
+    95% { opacity: 0.95; margin-left: -2%; }
+    100% { opacity: 1; margin-left: 0; }
+}
+
+@media (max-width: 800px) {
+    .flex {
+    }
+
+    #left-area {
+        order: 2;
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255, 255, 255, 0.9); 
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #right-area {
+        order: 1;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+
+    .header {
+        margin-bottom: 20px;
+    }
+
+    .form {
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    form {
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .logo img{
+        width: 30%;
+    }
 }
