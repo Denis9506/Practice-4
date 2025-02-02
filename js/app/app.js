@@ -1,7 +1,7 @@
 import { router } from './router.js';
-// import { header } from './widgets/header.js';
+import { header } from './widgets/header.js';
 // import { search } from './widgets/search.js';
-// import { popup } from './widgets/popup.js';
+import { popup } from './widgets/popup.js';
  import { msg } from './widgets/msg.js';
 // import { toogle } from './widgets/toogle.js'; 
 // import { img } from './widgets/img.js';
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',function(){
     const main = {
         data(){
             return {
-                url:"https://affiliate.yanbasok.com",
+                url:"http://affiliate.yanbasok.com",
                 user:{name:"",phone:"",email:"",date:"",auth:""},
                 formData:{},
                 title:"",
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded',function(){
             }
         },
         watch:{
-            $router:function(){
+            $route:function(){
                 this.init();
             }
         },
@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded',function(){
     };
 
     var app = Vue.createApp(main)
-    // .component('Header', header)
-    // .component('popup', popup)
+    .component('Header', header)
+    .component('popup', popup)
     // .component('search', search)
      .component('msg', msg)
     // .component('toogle', toogle)

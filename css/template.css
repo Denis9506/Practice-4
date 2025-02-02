@@ -44,6 +44,7 @@ body{
     width: 100%;
     height: 100%;
     align-items: center;
+    justify-content: center;
 }
 
 .logo{
@@ -187,6 +188,162 @@ input[type="password"]:focus {
     100% { opacity: 1; margin-left: 0; }
 }
 
+.popup-back {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.22);
+    z-index: 1000;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    color: #000;
+    background-color: #fff;
+    z-index: 1001;
+}
+
+.head-popup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dfe3e9;
+    padding: 20px;
+}
+
+.head-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.popup-inner {
+    margin: 30px 0 0 20px;
+    background-color: #fff;
+}
+
+.botBtns {
+    margin: 30px 0;
+}
+
+.btnS {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0 5px;
+    background-color: #00c276;
+    transition: background-color 0.3s ease;
+}
+
+.btnS:hover {
+    background-color: #12987d;
+}
+
+.left-wc {
+    text-align: end;
+}
+
+.fa-window-close {
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+.fa-window-close:hover {
+    color: #00c276;
+}
+
+#spinner {
+    background: rgba(255, 255, 255, 0.6) url(../images/loader.gif) no-repeat center;
+    background-size: 50px;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+}
+
+.header-pan {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="date"] {
+    border: 1px solid #dee2e6;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: #f3f7fd;
+}
+
+.table {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.table table {
+    width: 71%;
+    border-spacing: 0;
+    border: 1px solid #dee2e6;
+}
+
+.table thead th {
+    text-align: left;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.table tbody td {
+    padding: 10px;
+    border-top: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+.table tbody td:last-child {
+    border-right: none;
+}
+
+.table .id {
+    text-align: center;
+    width: 60px;
+}
+
+.table .actions {
+    text-align: center;
+    width: 80px;
+}
+
+.table a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.table a:hover {
+    color: #00c276;
+}
+
+.fa-trash-alt {
+    transition: color 0.3s ease;
+}
+
+.fa-trash-alt:hover {
+    color: #00c276;
+}
+
+
 @media (max-width: 800px) {
     #left-area {
         order: 2;
@@ -228,4 +385,17 @@ input[type="password"]:focus {
     .logo img{
         width: 30%;
     }
+}
+
+
+@media (max-width: 768px) {
+    .header-pan {
+        flex-direction: column;
+        text-align: center;
+        margin: 15px 0;
+    }
+    .table th, .table td {
+        font-size: 9px; 
+    }
+
 }
