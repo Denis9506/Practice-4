@@ -100,7 +100,9 @@ document.addEventListener('DOMContentLoaded',function(){
               }
         }
     };
+      
 
+    
     var app = Vue.createApp(main)
     .component('Header', header)
     .component('popup', popup)
