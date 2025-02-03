@@ -284,6 +284,8 @@ input[type="date"] {
     display: flex;
     justify-content: center;
     width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
 }
 
 .table table {
@@ -390,6 +392,7 @@ input[type="date"] {
 
 
 @media (max-width: 768px) {
+
     .header-pan {
         flex-direction: column;
         text-align: center;
@@ -399,7 +402,7 @@ input[type="date"] {
         font-size:11px; 
     }
     .table tbody td{
-        padding: 8px;
+        padding: 6px;
     }
     .popup{
         margin-left: -175px;
@@ -424,5 +427,11 @@ input[type="date"] {
     .date-range {
         flex-direction: column;
         gap: 5px;
+    }
+}
+
+@media (max-width:320px) {
+    .table{
+        justify-content: start;
     }
 }
