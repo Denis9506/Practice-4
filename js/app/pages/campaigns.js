@@ -94,7 +94,13 @@ export const campaigns = {
               <div class="w20 ptb30">
                   <h1>Campaigns</h1>
               </div>
-              <div class="w60 ptb20 ac"><input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" /></div>
+              <div class="w60 ptb20 ac">
+                <div class="date-range">
+                  <input type="date" v-model="date" @change="get()" />
+                    <span class="separator">-</span>
+                  <input type="date" v-model="date2" @change="get()" />
+                  </div>
+              </div>
               <div class="w20 al ptb20">
 
               </div>
