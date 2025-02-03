@@ -145,9 +145,9 @@ input[type="password"]:focus {
 .alertMsg {
     font-size: inherit;
     padding: 20px 10px;
+    margin: 0 10px;
     position: fixed;
     bottom: 5%;
-    left: 2%;
     border-radius: 10px;
     z-index: 999;
     height: auto;
@@ -203,6 +203,7 @@ input[type="password"]:focus {
     color: #000;
     background-color: #fff;
     z-index: 1001;
+    margin-left: -250px;
 }
 
 .head-popup {
@@ -396,6 +397,11 @@ input[type="date"] {
     }
     .table th, .table td {
         font-size: 9px; 
+    }
+
+    .popup{
+        margin-left: -175px;
+        width: 350px;
     }
 
 }
