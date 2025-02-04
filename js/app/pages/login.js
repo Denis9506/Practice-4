@@ -48,8 +48,8 @@ export const login = {
               </div>
           </div>
 
-          <div class="form p20">
-              <form @submit.prevent="login()" v-if="parent.formData">
+          <div class="form ">
+              <form class="login-form" @submit.prevent="login()" v-if="parent.formData">
                   <div class="row">
                       <label>Email</label>
                       <input type="email" v-model="parent.formData.email" required>

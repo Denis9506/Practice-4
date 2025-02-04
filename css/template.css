@@ -252,6 +252,10 @@ form{
     margin-top: 15px ;
     width: 90%;
 }
+.login-form{
+    width: 70%;
+    margin-top: 15px;
+}
 .botBtns {
     margin: 30px 0;
 }
