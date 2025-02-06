@@ -55,7 +55,10 @@ export const campaigns = {
     
       axios.post(this.parent.url + "/site/actionCampaign?auth=" + this.parent.user.auth, data).then(function(response) {
           self.$refs.new.active = 0;
-          if (self.parent.formData.id) {
+          if(response.data.error){
+            self.$refs.header.$refs.msg.alertFun(response.data.error);
+          }
+          else if (self.parent.formData.id) {
             self.$refs.header.$refs.msg.successFun("Successfully updated campaign!");
           } else {
             self.$refs.header.$refs.msg.successFun("Successfully added new campaign!");
