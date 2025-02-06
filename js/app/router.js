@@ -11,6 +11,7 @@ import { campaign } from './pages/campaign.js';
 export const router = VueRouter.createRouter({
   history: VueRouter.createWebHashHistory(),
   routes: [
+    { path: '/:pathMatch(.*)*', redirect: '/' }, 
     { path: '/', name: 'Sign in', component: login },
     { path: '/campaigns', name: 'Campaigns', component: campaigns },
     { path: '/campaign/:id', name: 'Campaign', component: campaign },
