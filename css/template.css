@@ -38,11 +38,15 @@ a {
 }
 
 .w30{
-    width: 40%;
+    width: 30%;
 }
 
 .w40{
     width: 40%;
+}
+
+.w50{
+    width: 50%;
 }
 
 .w60{
@@ -487,7 +491,7 @@ th .image {
 
 .table .id {
     text-align: center;
-    width: 60px;
+    width: 90px;
 }
 
 .table .actions {
@@ -620,28 +624,28 @@ li:has(a.router-link-active) {
     color: #00c276; 
 }
 
-.text-start{
-    padding: 0 10px;
-}
-
 #chartHints{
     display: flex;
     justify-content: space-between;
     font-weight: bold;
     margin-bottom: 5px;
 }
+
 .filchart{
     padding: 20px 0 0 10px;
     background-color: #f4f4f4;
 }
+
 .itemchart{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .itemchart .switch{
     margin-right: 10px;
 }
+
 .cubes{
     font-size: 40px;
     color: #ffffff;
@@ -649,69 +653,89 @@ li:has(a.router-link-active) {
     border-radius: 12px;
     overflow: hidden;
 }
+
 .clicks{
     background-color: #004e93;
     padding: 35px 0px 10px 20px;
 }
+
 .clicks div{
     margin-bottom: 10px;
 }
+
 .clicks :last-child {
     font-size: 18px;
 }
+
 .views{
     background-color: #4600ad;
     padding: 35px 0px 10px 20px;
 }
+
 .views div{
     margin-bottom: 10px;
 }
+
 .views :last-child {
     font-size: 18px;
 }
+
 .leads{
     background-color: #309100;
     padding: 35px 0px 10px 20px;
 }
+
 .leads div{
     margin-bottom: 10px;
 }
+
 .leads :last-child {
     font-size: 18px;
 }
+
 .ctr{
     color: #000;
     padding: 35px 0px 10px 20px;
 }
+
 .ctr div{
     margin-bottom: 10px;
 }
+
 .ctr :last-child {
     font-size: 16px;
 }
+
 #chartOuter{
     margin: 0 20px;
     padding-top: 20px;
 }
+
 .panelTop{
     background-color: #d4f2eb;
 }
+
 .btnS .fa-edit{
     color: #ffffff;
 }
+
 .btnS .fa-edit:hover{
     color: #ffffff; 
 }
+
 .image{
     width: 100px;
     height: 85px;
     text-align: center;
-    padding: 5px !important;
+    padding: 5px;
+
 }
+
 .image img{
     width: 100%;
     height: auto;
 }
+
 .row select{
     text-align: right;
     width: 100%; 
@@ -722,17 +746,93 @@ li:has(a.router-link-active) {
     font-size: 16px;
     background-color: #f2f6fc;
 }
+
 .row select:focus {
     outline: none; 
 }
+
 .image-preview-area{
     text-align: center;
     border: 1px solid #ddd;
     padding: 50px 0;
 }
+
 .max-width-pannel{
     max-width: 100%;
     justify-content: center;
+}
+
+.image-preview-area{
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 50px 0;
+}
+
+.tabs {
+    margin: 0;
+    padding: 0;
+} 
+
+.tabs li {
+    color: #333;
+    background-color: #fff;
+    padding: 10px 15px;
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 7px; 
+    box-sizing: border-box; 
+    border-bottom: 3px solid #bdbebe;
+    transition: all 0.5s ease;
+}
+
+.tabs li:hover{
+    background-color: transparent;
+    border-bottom-color: #02b671;
+}
+
+.tabs li.active {
+    border-bottom-color: #02b671;
+}
+
+form .row input[type="number"],
+form .row input[type="date"] {
+    text-align: right;
+    width: 100%; 
+    padding: 15px; 
+    border: 1px solid #ddd;
+    border-radius: 7px; 
+    box-sizing: border-box; 
+    font-size: 16px;
+    background-color: #f2f6fc;
+}
+
+form .row input[type="number"]:focus,
+form .row input[type="date"]:focus {
+    border-width: 1px;
+    border-color: #2196F3; 
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5); 
+    outline: none; 
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 7px; 
+    box-sizing: border-box; 
+    font-size: 16px;
+    background-color: #f2f6fc;
+    resize: vertical
+}
+
+textarea:focus{
+    border-width: 1px;
+    border-color: #2196F3; 
+    box-shadow: 0 0 10px rgba(33, 150, 243, 0.5); 
+    outline: none; 
 }
 
 @media (max-width: 800px) {
