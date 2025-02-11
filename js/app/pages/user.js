@@ -394,7 +394,7 @@ export const user = {
                 <table id="w100">
                     <thead>
                         <tr>
-                            <th class="id"></th>
+                            <th class="empty"></th>
                             <th class="id">Site</th>
                             <th class="id">Views</th>
                             <th class="id">Clicks</th>
@@ -405,10 +405,10 @@ export const user = {
                     </thead>
                     <tbody>
                         <tr v-for="(item,i) in data.sites">
-                            <td class="id">
+                            <td class="empty">
                               <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionSite();"/>
                             </td>
-                            <td class="">
+                            <td class="id">
                                 {{item.site}}
                             </td>
                             <td class="id">
@@ -547,8 +547,8 @@ export const user = {
                 <table id="w100">
                     <thead>
                         <tr>
-                            <th class="id"></th>
-                            <th class="id"></th>
+                            <th class="empty"></th>
+                            <th class="empty"></th>
                             <th class="id">Campaign</th>
                             <th>Size</th>
                             <th>Link</th>
@@ -560,7 +560,7 @@ export const user = {
                     </thead>
                     <tbody>
                         <tr v-for="(item,i) in data.statistics">
-                            <td class="id">
+                            <td class="empty">
                               <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionStatistic();"/>
                             </td>
                             <td class="image">

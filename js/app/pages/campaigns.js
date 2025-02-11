@@ -274,7 +274,7 @@ export const campaigns = {
                 <thead>
                     <tr>
                         <th class="id">#</th>
-                        <th class="id"></th>
+                        <th class="empty"></th>
                         <th>Title</th>
                         <th class="id">Views</th>
                         <th class="id">Clicks</th>
@@ -286,7 +286,7 @@ export const campaigns = {
                 <tbody>
                     <tr v-for="(item,i) in data.items">
                         <td class="id">{{item.id}}</td>
-                        <td class="id">
+                        <td class="empty">
                           <toogle v-model="item.published" @update:modelValue="parent.formData = item; action();" />
                         </td>
                         <td><router-link :to="'/campaign/'+item.id">{{item.title}}</router-link></td>

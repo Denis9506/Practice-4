@@ -413,8 +413,8 @@ export const campaign = {
                 <thead>
                     <tr>
                         <th class="id">#</th>
-                        <th class="id"></th>
-                        <th class="id"></th>
+                        <th class="empty"></th>
+                        <th class="empty"></th>
                         <th>Size</th>
                         <th>Link</th>
                         <th class="id">Views</th>
@@ -427,7 +427,7 @@ export const campaign = {
                 <tbody>
                     <tr v-for="(item,i) in data.items">
                         <td class="id">{{item.id}}</td>
-                        <td class="id">
+                        <td class="empty">
                           <toogle v-model="item.published" @update:modelValue="item.published = $event;parent.formData = item;actionAd()"/>
                         </td>
                         <td class="image">

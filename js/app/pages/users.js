@@ -156,7 +156,7 @@ export const users = {
                     <thead>
                         <tr>
                             <th class="id">#</th>
-                            <th class="id"></th>
+                            <th class="empty"></th>
                             <th>Name</th>
                             <th>Phone</th>
                             <th>Email</th>
@@ -166,7 +166,7 @@ export const users = {
                     <tbody>
                         <tr v-for="(item,i) in data.items">
                             <td class="id">{{item.id}}</td>
-                            <td class="id">
+                            <td class="empty">
                             <toogle :modelValue="item.published" @update:modelValue="item.published = $event;parent.formData = item;action()"/>
                             </td>
                             <td><router-link :to="'/user/'+item.id">{{item.user}}</router-link></td>
