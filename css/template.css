@@ -961,6 +961,7 @@ textarea:focus{
     }
 
 }
+
 @media (max-width: 600px) {
     .date-range {
         flex-direction: column;
@@ -1127,5 +1128,8 @@ textarea:focus{
     .tabs li{
         margin: 0 10px;
         font-size: 15px;
+    }
+    .btn{
+        margin: 0 5px;
     }
 }
