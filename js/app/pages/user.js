@@ -337,7 +337,11 @@ export const user = {
                         <h2>{{tabs[tab]}}</h2>
                     </div>
                     <div class="w60 ptb20 ac">
-                        <input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" />
+                        <div class="date-range">
+                        <input type="date" v-model="date" @change="get()" />
+                        <span class="separator">-</span>
+                        <input type="date" v-model="date2" @change="get()" />
+                        </div>
                     </div>
                     <div class="w20 ptb15 text-end">
                         <!-- <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i> New</a> -->
@@ -347,7 +351,11 @@ export const user = {
             <popup ref="chart" fullscreen="true" title="Chart">
                 <div class="flex pannel">
                     <div class="w30 ptb25">
-                        <input type="date" v-model="date" @change="get();"/> - <input type="date" v-model="date2" @change="get();"/>
+                        <div class="date-range">
+                        <input type="date" v-model="date" @change="get()" />
+                        <span class="separator">-</span>
+                        <input type="date" v-model="date2" @change="get()" />
+                        </div>
                     </div>
                     <div class="w70 text-start">
                         <div class="flex cubes">
@@ -531,7 +539,11 @@ export const user = {
                         <h2>{{tabs[tab]}}</h2>
                     </div>
                     <div class="w60 ptb20 ac">
-                        <input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" />
+                        <div class="date-range">
+                        <input type="date" v-model="date" @change="get()" />
+                        <span class="separator">-</span>
+                        <input type="date" v-model="date2" @change="get()" />
+                        </div>  
                     </div>
                     <div class="w20 ptb15 text-end">
                         <!-- <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i> New</a> -->

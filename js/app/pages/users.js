@@ -97,7 +97,7 @@ export const users = {
                     </div>
                     <div class="w70"><search /></div>
                     <div class="w20 ptb20 text-end">
-                        <a href="#" class="btnS" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i> New</a>
+                        <a href="#" class="btnS" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i> <span class="a_text">New</span></a>
                     </div>
                 </div>
             </div>

@@ -41,7 +41,7 @@ export const popup = {
             </a>
           </div>
         </div>
-        <div>
+        <div class="popup-inner">
           <slot/>
         </div>
       </div>

@@ -278,11 +278,13 @@ input[type="password"]:focus {
 }
 
 .popup-inner {
+    margin: 30px 20px;
+
     background-color: #ffffff;
 }
 
 .margin-inner{
-    margin: 30px 0 0 20px;
+    margin: 30px 20px;
 }
 
 form{
@@ -305,6 +307,7 @@ form{
     margin: 0 5px;
     background-color: #00c276;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btnS:hover {
@@ -433,7 +436,7 @@ input:checked + .slider::before{
 .header-pan {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 }
@@ -451,6 +454,7 @@ input[type="date"] {
     width: 100%;
     border-collapse: collapse;
     overflow-x: auto;
+    margin-bottom: 10px;
 }
 
 .table table {
@@ -478,7 +482,7 @@ input[type="date"] {
     border-top: 1px solid #dee2e6;
     border-right: 1px solid #dee2e6;
     white-space: normal;
-    word-break: break-word;
+    /* word-break: break-word; */
     max-width: 200px; 
 }
 
@@ -578,7 +582,7 @@ li {
 
 .router-link-active,
 .router-link-active i {
-    color: #00c276 ;
+    color: #00c276 !important;
 }
 
 li:has(a.router-link-active) {
@@ -634,6 +638,7 @@ li:has(a.router-link-active):hover::after {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     white-space: nowrap;
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+    z-index: 999;
 }
 
 #user-info.active {
@@ -868,10 +873,27 @@ textarea:focus{
     outline: none; 
 }
 
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    justify-content: center;
+}
+
+.separator {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; 
+}
+#menu > i, 
+#menu li > i {
+    display: none;
+}
+
 @media (max-width: 800px) {
     #left-area {
         order: 2;
-        width: 80%;
+        width: 90%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -880,7 +902,9 @@ textarea:focus{
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
-
+    .login-form{
+        width: 80%;
+    }
     #right-area {
         order: 1;
         width: 100%;
@@ -908,45 +932,35 @@ textarea:focus{
     }
     .logo img{
         object-fit:fill;
+        margin: 0;
     }
 
 }
 
 @media (max-width: 768px) {
-
+    .a_text{
+        display: none;
+    }
     .header-pan {
         flex-direction: column;
         text-align: center;
         margin: 15px 0;
     }
     .table th, .table td {
-        font-size:11px; 
+        font-size: 14px; 
     }
     .table tbody td{
         padding: 6px;
     }
-    .standart{
-        margin-left: -175px ;
-        width: 350px;
-    }
+    
     .btnS{
         margin-top: 15px;
     }
+    .image img{
+        width: 70px;
+    }
 
 }
-.date-range {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    justify-content: center;
-}
-
-.separator {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333; 
-}
-
 @media (max-width: 600px) {
     .date-range {
         flex-direction: column;
@@ -956,10 +970,162 @@ textarea:focus{
         justify-content: end;
         padding: 0;
     }
+    .al h1{
+        font-size: 17px;
+    }
+    input[type="email"], input[type="password"]{
+        font-size: 13px;
+    }
 }
 
-@media (max-width:320px) {
+@media (max-width:470px) {
+   
     .table{
         justify-content: start;
+    }
+}
+
+
+@media (max-width: 980px){
+    .table tbody .actions a{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    
+    .pannel div{
+        text-align: center;
+        width: 100%;
+    }
+
+    .table .actions {
+        text-align: center;
+    }
+}
+
+@media(max-width:1200px){
+    .popup-inner .pannel, .popup-inner .body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .popup{
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+    .cubes{
+        margin: 20px 0;
+    }
+    .filchart{
+        width: 100%;
+    }
+    #myChart{
+        width: 100% !important;
+        max-height: 440px !important;
+    }
+    #chartOuter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-height: 440px;
+    }
+    #chartHints{
+        width: 100%;
+    }
+    .views, .leads, .ctr, .clicks{
+        font-size: 18px;
+        padding: 35px 10px 10px 10px;
+    }
+}
+
+@media (max-width: 768px){
+    .w10{
+        min-width: 60px;
+    }
+
+    #menu{
+        align-items: center;
+        justify-content: start;
+    }
+
+    #menu .fa-bars{
+        display: block;
+        color: #fff;
+        margin-left: 10px;
+    }
+
+    #menu ul{
+        display: none;
+    }
+    
+    #menu > i, #menu li > i {
+        display: block;
+    }
+
+    #menu .active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #3a3a3a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        z-index: 1000;
+    }
+    #menu .active li{
+        height: 5%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    li:has(a.router-link-active)::after {
+        height: 0px;
+    }
+    .pannel{
+        flex-direction: column;
+    }
+    .panelTop .pannel h1{
+        min-width: 250px;
+    }
+    .panelTop .pannel .text-end {
+        margin-top: 0;
+    }
+    .pannel .text-end{
+        margin-top: 20px;
+    }
+
+    .pannel .text-end{
+        text-align: center;
+    }
+    .pannel .text-end{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 730px){
+    .popup{
+        top: 0 !important;
+        max-width: 1024px !important;
+        width: 100%;
+        margin-left: 0 !important;
+        left: 0 !important;
+        height: 100% !important;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+    .cubes{
+        font-size: 24px;
+    }
+    .tabs{
+        display: flex;
+        justify-content: center;
+    }
+    .tabs li{
+        margin: 0 10px;
+        font-size: 15px;
     }
 }

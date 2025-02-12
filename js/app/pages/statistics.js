@@ -93,12 +93,16 @@ export const statistics = {
                         <h1>Statistics</h1>
                     </div>
                     <div class="w60 ptb20 ac">
-                        <input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" />
+                        <div class="date-range">
+                        <input type="date" v-model="date" @change="get()" />
+                        <span class="separator">-</span>
+                        <input type="date" v-model="date2" @change="get()" />
+                        </div>
                     </div>
                     <div class="w20 ptb15 text-end">
                         <a href="#" class="btnS" @click.prevent="parent.formData.copy = data.multi;$refs.copy.active=1">
                             <i class="fas fa-images"></i> 
-                            Multi banners
+                            <span class="a_text">Multi banners</span>
                         </a>
                     </div>
                 </div>

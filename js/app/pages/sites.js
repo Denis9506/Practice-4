@@ -89,7 +89,11 @@ export const sites = {
                         <h1>Sites</h1>
                     </div>
                     <div class="w60 ptb20 ac">
-                        <input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" />
+                        <div class="date-range">
+                        <input type="date" v-model="date" @change="get()" />
+                        <span class="separator">-</span>
+                        <input type="date" v-model="date2" @change="get()" />
+                        </div>
                     </div>
                     <div class="w20 ptb20 text-end">
 

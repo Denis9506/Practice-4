@@ -148,7 +148,7 @@ export const campaign = {
                 // }
               }
             }
-            document.getElementById('chartOuter').innerHTML = '<div id="chartHints"><div class="chartHintsViews">Views</div><div class="chartHintsClicks">Clicks</div><canvas id="myChart"></canvas></div>'
+            document.getElementById('chartOuter').innerHTML = '<div id="chartHints"><div class="chartHintsViews">Views</div><div class="chartHintsClicks">Clicks</div></div><canvas id="myChart"></canvas>'
             const ctx = document.getElementById('myChart');
             const xScaleImage = {
               id:"xScaleImage",
@@ -254,7 +254,11 @@ export const campaign = {
           <popup ref="chart" fullscreen="true" title="Chart">
               <div class="flex pannel">
                   <div class="w30 ptb25">
-                      <input type="date" v-model="date" @change="get();"/> - <input type="date" v-model="date2" @change="get();"/>
+                  <div class="date-range">
+                  <input type="date" v-model="date" @change="get()" />
+                    <span class="separator">-</span>
+                  <input type="date" v-model="date2" @change="get()" />
+                  </div>
                   </div>
                   <div class="w70 text-start">
                       <div class="flex cubes">
@@ -321,10 +325,14 @@ export const campaign = {
                   <h2>Ads</h2>
               </div>
               <div class="w60 ptb20 ac">
-                  <input type="date" v-model="date" @change="get()" /> - <input type="date" v-model="date2" @change="get()" />
+                <div class="date-range">
+                <input type="date" v-model="date" @change="get()" />
+                  <span class="separator">-</span>
+                <input type="date" v-model="date2" @change="get()" />
+                </div>   
               </div>
               <div class="w20 ptb20 text-end">
-                  <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.ad.active=1"><i class="fas fa-plus"></i> New</a>
+                  <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.ad.active=1"><i class="fas fa-plus"></i> <span class="a_text">New</span> </a>
               </div>
           </div>
         </div>

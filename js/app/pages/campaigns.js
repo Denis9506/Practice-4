@@ -193,7 +193,7 @@ export const campaigns = {
   <div class="inside-content">
     <Header ref="header" />
     <div id="spinner" v-if="loader"></div>
-    <div class="wrapper">
+    <div class="wrapper-max">
           <div class="header-pan">
               <div class="ptb30">
                   <h1>Campaigns</h1>
@@ -205,13 +205,17 @@ export const campaigns = {
                   <input type="date" v-model="date2" @change="get()" />
                   </div>
               </div>
-              <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i>  New</a>
+              <a class="btnS" href="#" @click.prevent="parent.formData={};$refs.new.active=1"><i class="fas fa-plus"></i>  <span class="a_text">New</span> </a>
         </div>
 
-        <popup ref="chart" fullscreen="true" title="Chart">
-        <div class="flex pannel">
+        <popup  ref="chart" fullscreen="true" title="Chart">
+        <div class="flex pannel popup-inner-chart">
             <div class="w30 ptb25">
-                <input type="date" v-model="date" @change="get();"/> - <input type="date" v-model="date2" @change="get();"/>
+            <div class="date-range">
+            <input type="date" v-model="date" @change="get()" />
+              <span class="separator">-</span>
+            <input type="date" v-model="date2" @change="get()" />
+            </div>    
             </div>
             <div class="w70 text-start">
                 <div class="flex cubes">
@@ -270,7 +274,7 @@ export const campaigns = {
         </div>
         </popup>
         <div class="table" v-if="date.items!=''">
-            <table>
+            <table id="w100">
                 <thead>
                     <tr>
                         <th class="id">#</th>
